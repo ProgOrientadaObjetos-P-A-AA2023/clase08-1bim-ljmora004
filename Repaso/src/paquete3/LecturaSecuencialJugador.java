@@ -69,6 +69,16 @@ public class LecturaSecuencialJugador {
     public ArrayList<Jugador> obtenerJugadores() {
         return jugadores;
     }
+    
+    public Jugador obtenerJugadorNombre(String nom){
+        for (int i = 0; i < jugadores.size(); i++) {
+            if (jugadores.get(i).obtenerNombre().equals(nom)) {
+                return jugadores.get(i);
+            }
+        }
+        
+        return null;
+    }
 
     public String obtenerNombreArchivo() {
         return nombreArchivo;
